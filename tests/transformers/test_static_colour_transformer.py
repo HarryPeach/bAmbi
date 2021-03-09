@@ -11,7 +11,7 @@ class TestStaticColourTransformer:
         colour = (255, 0, 255, 0)
 
         stc = StaticColourTransformer(colour=colour)
-        stc.transform(state=layout.led_state)
+        stc.transform(layout)
 
-        for led in layout.led_state:
+        for led in layout.get_stitched_state():
             expect(led).to(equal(colour))

@@ -6,13 +6,16 @@ class TestLayout:
     def test_state_creation_size(self) -> None:
         """Tests that the layout state is of the correct size
         """
-        expect(len(Layout((5, 3)).led_state)).to(equal(16))
-        expect(len(Layout((7, 1)).led_state)).to(equal(16))
-        expect(len(Layout((9, 3)).led_state)).to(equal(24))
+        layout = Layout((5, 3))
+        expect(len(layout.top_state)).to(equal(5))
+        expect(len(layout.bottom_state)).to(equal(5))
+        expect(len(layout.left_state)).to(equal(3))
+        expect(len(layout.right_state)).to(equal(3))
 
     def test_state_creation_default_state(self) -> None:
         """Tests that the default layout state is correctly initialized
         """
         layout = Layout((5, 5))
-        for led in layout.led_state:
+        ss = layout.get_stitched_state()
+        for led in ss:
             expect(led).to(equal((0, 0, 0, 0)))
