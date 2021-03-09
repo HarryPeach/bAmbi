@@ -9,4 +9,5 @@ class Layout():
         Args:
             dimensions (tuple[int, int]): The dimensions of the led strips in x and y
         """
+        # Set the initial state of all leds to black and dim
         self.led_state = [(0, 0, 0, 0)] * ((dimensions[0] + dimensions[1]) * 2)
