@@ -6,10 +6,6 @@ import random
 
 class AverageColourTransformer(BaseTransformer):
 
-    def _get_random_color(self) -> str:
-        return "#"+''.join([random.choice('0123456789ABCDEF')
-                            for _ in range(6)])
-
     def _draw_box(self, img, bb_width, bb_height, start_x, start_y) -> str:
         imd = ImageDraw.Draw(img)
         cropped_image = img.crop((start_x, start_y, start_x + bb_width,
