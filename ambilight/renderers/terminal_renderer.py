@@ -3,6 +3,7 @@ from ambilight.layout import Layout
 
 from colored import bg, attr
 
+import os
 
 class TerminalRenderer(BaseRenderer):
     def __init__(self) -> None:
@@ -21,6 +22,24 @@ class TerminalRenderer(BaseRenderer):
                                   max(0, min(rgba[2], 255)))
 
     def render(self, layout: Layout) -> None:
-        for item in layout.get_stitched_state():
-            print(bg(self._rgba_to_hex(item)) + "#", end="")
+        PRINT_CHAR = " "
+        os.system('cls' if os.name == 'nt' else 'clear')
+
+        print(bg("#000000") + PRINT_CHAR, end="")
+        for item in layout.top_state:
+            print(bg(self._rgba_to_hex(item)) + PRINT_CHAR, end="")
+        print(bg("#000000") + PRINT_CHAR, end="")
+        print(attr("reset"))
+
+        for i in range(len(layout.left_state)):
+            print(bg(self._rgba_to_hex(layout.left_state[i])) + PRINT_CHAR, end="")
+            for _ in range(len(layout.top_state)):
+                print(bg("#000000") + PRINT_CHAR, end="")
+            print(bg(self._rgba_to_hex(layout.right_state[i])) + PRINT_CHAR, end="")
+            print(attr("reset"))
+
+        print(bg("#000000") + PRINT_CHAR, end="")
+        for item in reversed(layout.bottom_state):
+            print(bg(self._rgba_to_hex(item)) + PRINT_CHAR, end="")
+        print(bg("#000000") + PRINT_CHAR, end="")
         print(attr("reset"))

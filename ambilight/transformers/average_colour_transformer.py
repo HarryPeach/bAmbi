@@ -57,4 +57,4 @@ class AverageColourTransformer(BaseTransformer):
             layout.left_state[i] = self._draw_box(im, bounding_box_width,
                                                   bounding_box_height, start_x, start_y)
 
-        im.show()
+        # im.show()
