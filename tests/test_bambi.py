@@ -1,4 +1,4 @@
-from ambilight import __version__
+from bambi import __version__
 
 
 def test_version():

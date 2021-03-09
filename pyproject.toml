@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "ambilight"
+name = "bambi"
 version = "0.1.0"
-description = ""
-authors = ["Harry Peach (Personal Signing Key) <harrypeach1999@gmail.com>"]
+description = "Background Ambient Lighting for your monitor"
+authors = ["Harry Peach"]
 
 [tool.poetry.dependencies]
 python = "^3.9"

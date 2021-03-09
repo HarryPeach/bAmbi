@@ -1,4 +1,4 @@
-from ambilight.layout import Layout
+from bambi.layout import Layout
 from expects import equal, expect
 
 

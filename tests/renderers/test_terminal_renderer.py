@@ -1,4 +1,4 @@
-from ambilight.renderers.terminal_renderer import TerminalRenderer
+from bambi.renderers.terminal_renderer import TerminalRenderer
 from expects import expect, equal
 
 

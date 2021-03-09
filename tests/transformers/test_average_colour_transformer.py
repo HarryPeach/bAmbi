@@ -1,5 +1,5 @@
-from ambilight.transformers.average_colour_transformer import AverageColourTransformer
-from ambilight.layout import Layout
+from bambi.transformers.average_colour_transformer import AverageColourTransformer
+from bambi.layout import Layout
 from unittest.mock import patch
 from PIL import Image
 from typing import Callable, Any
@@ -11,7 +11,7 @@ class TestAverageColourTransformer():
     """Tests the AverageColourTransformer class
     """
 
-    @patch("ambilight.transformers.average_colour_transformer.ImageGrab")
+    @patch("bambi.transformers.average_colour_transformer.ImageGrab")
     def test_correct_average(self, mock_req: Callable[[], Any]) -> None:
         """Tests that the algorithm is correctly averaging the colours, and in the
         correct order

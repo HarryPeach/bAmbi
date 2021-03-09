@@ -1,5 +1,5 @@
-from ambilight.layout import Layout
-from ambilight.transformers.static_colour_transformer import StaticColourTransformer
+from bambi.layout import Layout
+from bambi.transformers.static_colour_transformer import StaticColourTransformer
 from expects import expect, equal
 
 

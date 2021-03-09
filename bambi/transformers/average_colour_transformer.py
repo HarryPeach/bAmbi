@@ -1,5 +1,5 @@
-from ambilight.layout import Layout
-from ambilight.transformers.base_transformer import BaseTransformer
+from bambi.layout import Layout
+from bambi.transformers.base_transformer import BaseTransformer
 from PIL import Image, ImageDraw, ImageGrab
 import random
 

@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from ambilight.layout import Layout
+from bambi.layout import Layout
 
 
 class BaseTransformer(ABC):

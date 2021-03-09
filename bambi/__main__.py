@@ -1,6 +1,6 @@
-from ambilight.transformers.average_colour_transformer import AverageColourTransformer
-from ambilight.renderers.terminal_renderer import TerminalRenderer
-from ambilight.layout import Layout
+from bambi.transformers.average_colour_transformer import AverageColourTransformer
+from bambi.renderers.terminal_renderer import TerminalRenderer
+from bambi.layout import Layout
 
 from time import sleep
 

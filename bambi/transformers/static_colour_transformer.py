@@ -1,5 +1,5 @@
-from ambilight.transformers.base_transformer import BaseTransformer
-from ambilight.layout import Layout
+from bambi.transformers.base_transformer import BaseTransformer
+from bambi.layout import Layout
 
 
 class StaticColourTransformer(BaseTransformer):

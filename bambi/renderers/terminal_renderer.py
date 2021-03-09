@@ -1,9 +1,9 @@
-from ambilight.renderers.base_renderer import BaseRenderer
-from ambilight.layout import Layout
-
+from bambi.renderers.base_renderer import BaseRenderer
+from bambi.layout import Layout
 from colored import bg, attr
 
 import os
+
 
 class TerminalRenderer(BaseRenderer):
     def __init__(self) -> None:
@@ -32,10 +32,12 @@ class TerminalRenderer(BaseRenderer):
         print(attr("reset"))
 
         for i in range(len(layout.left_state)):
-            print(bg(self._rgba_to_hex(layout.left_state[i])) + PRINT_CHAR, end="")
+            print(bg(self._rgba_to_hex(
+                layout.left_state[i])) + PRINT_CHAR, end="")
             for _ in range(len(layout.top_state)):
                 print(bg("#000000") + PRINT_CHAR, end="")
-            print(bg(self._rgba_to_hex(layout.right_state[i])) + PRINT_CHAR, end="")
+            print(bg(self._rgba_to_hex(
+                layout.right_state[i])) + PRINT_CHAR, end="")
             print(attr("reset"))
 
         print(bg("#000000") + PRINT_CHAR, end="")
