@@ -5,9 +5,9 @@ from bambi.layout import Layout
 from time import sleep
 
 if __name__ == "__main__":
-    layout = Layout((8, 5))
+    layout = Layout((9, 6))
 
-    sleep(4)
+    sleep(5)
 
     act = AverageColourTransformer()
     act.transform(layout)

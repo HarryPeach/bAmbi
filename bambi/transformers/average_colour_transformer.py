@@ -54,3 +54,4 @@ class AverageColourTransformer(BaseTransformer):
                                                   bounding_box_height, start_x, start_y)
 
         # im.show()
+        im.save("x.png")
