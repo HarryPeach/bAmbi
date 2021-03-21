@@ -4,7 +4,7 @@ from bambi.layout import Layout
 
 class StaticColourTransformer(BaseTransformer):
 
-    def __init__(self, colour: tuple[int, int, int, int]) -> None:
+    def __init__(self, colour: tuple[int, int, int]) -> None:
         self.colour = colour
 
     def transform(self, layout: Layout) -> None:

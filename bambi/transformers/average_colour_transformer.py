@@ -1,21 +1,15 @@
 from bambi.layout import Layout
 from bambi.transformers.base_transformer import BaseTransformer
-from PIL import Image, ImageDraw, ImageGrab
-import random
+from PIL import Image, ImageGrab
 
 
 class AverageColourTransformer(BaseTransformer):
 
     def _draw_box(self, img, bb_width, bb_height, start_x, start_y) -> str:
-        imd = ImageDraw.Draw(img)
         cropped_image = img.crop((start_x, start_y, start_x + bb_width,
                                   start_y + bb_height))
         cropped_image.thumbnail((1, 1), Image.NEAREST)
         color = cropped_image.getpixel((0, 0))
-
-        imd.rectangle([(start_x, start_y), (start_x + bb_width,
-                                            start_y + bb_height)],
-                      fill=color, outline="#000000")
 
         return color + (255,)
 
@@ -52,6 +46,3 @@ class AverageColourTransformer(BaseTransformer):
             start_y = (ir + 1) * bounding_box_height
             layout.left_state[i] = self._draw_box(im, bounding_box_width,
                                                   bounding_box_height, start_x, start_y)
-
-        # im.show()
-        im.save("x.png")

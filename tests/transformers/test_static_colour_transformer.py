@@ -4,7 +4,7 @@ from expects import expect, equal
 
 
 class TestStaticColourTransformer:
-    def test_transform(self) -> None:
+    def test_transform(_) -> None:
         """Tests that the transform correctly applies the same colour to all LEDs
         """
         layout = Layout((5, 5))

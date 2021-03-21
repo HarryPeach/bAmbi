@@ -11,12 +11,12 @@ class Layout():
         """
         self.dimensions = dimensions
         # Set the initial state of all leds to black and dim
-        self.top_state = [(0, 0, 0, 0)] * dimensions[0]
-        self.bottom_state = [(0, 0, 0, 0)] * dimensions[0]
-        self.left_state = [(0, 0, 0, 0)] * dimensions[1]
-        self.right_state = [(0, 0, 0, 0)] * dimensions[1]
+        self.top_state = [(0, 0, 0)] * dimensions[0]
+        self.bottom_state = [(0, 0, 0)] * dimensions[0]
+        self.left_state = [(0, 0, 0)] * dimensions[1]
+        self.right_state = [(0, 0, 0)] * dimensions[1]
 
-    def get_stitched_state(self) -> list[tuple[int, int, int, int]]:
+    def get_stitched_state(self) -> list[tuple[int, int, int]]:
         """Returns the state of all leds stitched together in the order of: top, right,
         bottom, left
 

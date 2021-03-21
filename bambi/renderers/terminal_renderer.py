@@ -9,7 +9,7 @@ class TerminalRenderer(BaseRenderer):
     def __init__(self) -> None:
         self.led_draw_state = None
 
-    def _rgba_to_hex(self, rgba: tuple[int, int, int, int]) -> str:
+    def _rgba_to_hex(_, rgba: tuple[int, int, int]) -> str:
         """Converts an rgba value to its hex equivalent
 
         Args:

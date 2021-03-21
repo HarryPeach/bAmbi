@@ -12,7 +12,7 @@ class TestAverageColourTransformer():
     """
 
     @patch("bambi.transformers.average_colour_transformer.ImageGrab")
-    def test_correct_average(self, mock_req: Callable[[], Any]) -> None:
+    def test_correct_average(_, mock_req: Callable[[], Any]) -> None:
         """Tests that the algorithm is correctly averaging the colours, and in the
         correct order
 
