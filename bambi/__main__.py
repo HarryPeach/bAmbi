@@ -11,12 +11,12 @@ if __name__ == "__main__":
 
     time.sleep(5)
 
-    act = SnakeTransformer()
+    act = AverageColourTransformer()
     serial_renderer = SerialRenderer()
     while True:
-        # ts = time.time()
         act.transform(layout)
 
+        ts = time.time()
         serial_renderer.render(layout)
-        # te = time.time()
-        # print(te - ts)
+        te = time.time()
+        print(te - ts)
