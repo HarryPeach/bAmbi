@@ -12,7 +12,6 @@ class SerialRenderer(BaseRenderer):
     def render(self, layout: Layout) -> None:
         for i, led in enumerate(layout.get_stitched_state()):
             self.serial.write(f"{i}:{led[0]},{led[1]},{led[2]};".encode())
-            print(f"{i}:{led[0]},{led[1]},{led[2]};".encode())
 
     def __del__(self) -> None:
         self.serial.close()

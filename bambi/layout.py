@@ -10,7 +10,7 @@ class Layout():
             dimensions (tuple[int, int]): The dimensions of the led strips in x and y
         """
         self.dimensions = dimensions
-        # Set the initial state of all leds to black and dim
+        # Set the initial state of all leds to black (off)
         self.top_state = [(0, 0, 0)] * dimensions[0]
         self.bottom_state = [(0, 0, 0)] * dimensions[0]
         self.left_state = [(0, 0, 0)] * dimensions[1]
@@ -23,4 +23,5 @@ class Layout():
         Returns:
             list[tuple[int, int, int, int]]: The stitched state
         """
-        return self.top_state + self.right_state + self.bottom_state + self.left_state
+        return self.right_state + self.top_state + self.left_state + self.bottom_state
+        # return self.top_state + self.right_state + self.bottom_state + self.left_state

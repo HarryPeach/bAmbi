@@ -11,7 +11,7 @@ class AverageColourTransformer(BaseTransformer):
         cropped_image.thumbnail((1, 1), Image.NEAREST)
         color = cropped_image.getpixel((0, 0))
 
-        return color + (255,)
+        return color
 
     def transform(self, layout: Layout) -> None:
         im = ImageGrab.grab()

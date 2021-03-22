@@ -26,8 +26,12 @@ class TestAverageColourTransformer():
         act = AverageColourTransformer()
         act.transform(layout)
 
-        expected_output = [(255, 0, 0, 255), (0, 255, 0, 255),
-                           (0, 0, 255, 255), (255, 255, 0, 255),
-                           (0, 255, 255, 255), (255, 0, 255, 255),
-                           (0, 0, 0, 255), (255, 255, 255, 255)]
+        expected_output = [(0, 0, 255), (255, 255, 0),
+                           (255, 0, 0), (0, 255, 0),
+                           (0, 0, 0), (255, 255, 255),
+                           (0, 255, 255), (255, 0, 255)]
+        # expected_output = [(255, 0, 0, 255), (0, 255, 0, 255),
+        #                    (0, 0, 255, 255), (255, 255, 0, 255),
+        #                    (0, 255, 255, 255), (255, 0, 255, 255),
+        #                    (0, 0, 0, 255), (255, 255, 255, 255)]
         expect(layout.get_stitched_state()).to(equal(expected_output))
