@@ -2,6 +2,8 @@
 
 > **b**ackground **Ambi**ent Monitor Lighting
 
+[![Example Video](https://user-images.githubusercontent.com/4750998/123708982-34da8f00-d864-11eb-9d68-00c8b118d721.png)](https://i.imgur.com/ZwlL6op.mp4)
+
 Bambi is a controller that manages the background ambient lighting of a monitor, similar to the Ambilight technology.
 
 ## How it works
